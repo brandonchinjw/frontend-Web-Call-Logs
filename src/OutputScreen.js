@@ -19,7 +19,7 @@ function OutputScreen() {
           if (!response.ok) {
             throw new Error('Failed to fetch data');
           }
-    
+            
           const data = await response.json();
           setQuestion(data.question);
           setFacts(data.facts);
@@ -60,6 +60,7 @@ function OutputScreen() {
               </React.Fragment>
             )}
           </div>
+          <button onClick={() => navigate('/')} className="Back-Button">Back</button>
         </div>
       </body>
     </div>

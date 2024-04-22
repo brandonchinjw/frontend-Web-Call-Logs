@@ -1,7 +1,7 @@
 import clericLogo from './assets/clericLogo.svg';
 import './InputScreen.css';
-import { useState, useEffect, useId, createRef } from 'react';
-import { BrowserRouter, useNavigate } from 'react-router-dom'; 
+import { useState, useId } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import TypeWriterText from './TypewriterText';
 
 function InputScreen() {
@@ -9,7 +9,6 @@ function InputScreen() {
   const callLogListId = useId();
   const [question, setQuestion] = useState('');
   const [callLogs, setCallLogs] = useState([]);
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -30,14 +29,11 @@ function InputScreen() {
         throw new Error('Failed to submit data');
       }
       console.log('Data submitted successfully');
-      setError(null);
       setLoading(false);
       navigate('/output')
 
     } catch (error) {
-      setError('Failed to submit data');
-      console.error('Error:', error);
-  
+      console.log('Error:', error);
     }
   };
 
@@ -47,7 +43,7 @@ function InputScreen() {
     if ((!inputString.includes('[')) || (!inputString.includes(']'))) {
       return false
     }
-    return items.every(item => item.trim() != '');
+    return items.every(item => item.trim() !== '');
   }
 
   return (
