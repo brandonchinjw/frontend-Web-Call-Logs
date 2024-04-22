@@ -1,0 +1,89 @@
+.Output-Page {
+text-align: center;
+}
+
+.App-Logo {
+height: 30px;
+margin-left: 20px;
+
+}
+
+.Assignment {
+font-size: 30px;
+flex: 1;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Top-Name {
+font-size: 30px;
+margin-left: auto;
+margin-right: 20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Square-Div{
+display: flex;
+flex-direction: column;
+background-color: lightblue;
+height: 70vh;
+width: 60vw;
+border-radius: 20px;
+}
+
+.Input-Page-Header {
+background-color: lightblue;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 20px;
+height: 17vh;
+width: 100%;
+box-sizing: border-box;
+}
+
+.Input-Page-Body {
+background-color: lightskyblue;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+height: 83vh;
+width: 100vw;
+}
+
+.Welcome-Text {
+color: black;
+font-size: 30px;
+padding: 10px;
+font-family: 'Courier New', Courier, monospace;
+}
+
+.TypeWriter-Container {
+height: 15vh;
+margin-top: 2vh;
+}
+
+.Response-Container {
+height: 15vh;
+}
+
+.Question {
+align-self: center;
+width: auto;
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+margin-top: 1vh;
+}
+
+.Facts {
+align-self: center;
+width: auto;
+font-size: 18px;
+font-family: 'Courier New', Courier, monospace;
+margin-top: 1vh;
+}
+
+.List {
+    margin-left: 10px;
+}
